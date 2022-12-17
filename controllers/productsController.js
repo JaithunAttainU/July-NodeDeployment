@@ -11,6 +11,7 @@ cloudinary.config({
 
 const getProducts = (request, response) => {
   try {
+    console.log("dummuy")
     response.send({ status: 'success', products })
   } catch (err) {
     response.status(500).send({ status: 'error', msg: 'error fetching movies' })
