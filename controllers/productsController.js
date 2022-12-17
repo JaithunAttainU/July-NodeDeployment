@@ -22,6 +22,7 @@ const postProduct = async (request, response) => {
     const productData = request.body
     const fileData = request.file
 
+    console.log(fileData)
     if (fileData) {
       const base64String = Base64.encode(fileData.buffer)
       const cloudRes = await cloudinary.uploader.upload(`data:${fileData.mimetype};base64,${base64String}`)
